@@ -1,0 +1,31 @@
+html, body, .container-table {
+    height: 100%;
+    
+    
+}
+.container-table {
+    display: table;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+.containertop{
+
+    margin-top: 60px;
+    margin-left: 40px;
+    width: 100%;
+}
+.Event-form
+{
+    margin-top:20px;
+}
+.ngb-tabset{
+    font-weight:bold;
+    margin-top:20px;
+}
+
+  

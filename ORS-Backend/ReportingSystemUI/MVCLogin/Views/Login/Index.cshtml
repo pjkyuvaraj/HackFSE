@@ -1,0 +1,65 @@
+﻿@model MVCLogin.Models.UserDetail
+@{
+    ViewBag.Title = "Index";
+   
+}
+
+<h2>Index</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Page design with MVC pattern</title>
+    <style>
+        #Login_div{
+            position:absolute;
+            top:40%;
+            left:40%;
+            border:5px double black;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Login_div">
+        @using (Html.BeginForm("Authorization","Login", FormMethod.Post))
+        {
+        <table>
+            <tr>
+                <td></td>
+                <td style="background-color:lightblue; align-content:center">Login Page Application</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.UserName)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.UserName)
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Password)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Password)
+                </td>
+            </tr>           
+            <tr>
+                <td colspan="2">
+                 @Html.LabelFor(model=> model.LoginErrorMessage)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="login" value="Login" />
+                    <input type="reset" name="clear" value="Clear" />
+                </td>
+            </tr>
+        </table>
+        }
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<div class="containertop">
+  <div class="page-header">
+    <h3>GenericMetrics</h3>
+  </div>
+  <form class="form-class" #gmForm="ngForm" (ngSubmit)="onSubmit(gmForm)">
+    <div class="row">
+      <div class="form-group">
+        Select Type :
+      </div>
+      <div class="form-group col-lg-2">
+        <select class="form-control" name="eventInterval" [(ngModel)]="GenericMetricInput.eventInterval" required>
+          <option value="">---SELECT---</option>
+          <option *ngFor="let opt of ['Date','Day','Month','WeekDay','WeekEnd']" [value]="opt">{{opt|uppercase}}</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="form-group mr-2">
+        Start Date :
+      </div>
+      <div class="form-group col-lg-2">
+        <input type="date" class="form-control" name="startDate" #sDate="ngModel" [(ngModel)]="GenericMetricInput.startDate" placeholder="MM-DD-YYYY">
+        <div class="validation-error" *ngIf="sDate.invalid && sDate.touched">
+          This Field is Required.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group mr-2">
+        End Date :
+      </div>
+      <div class="form-group col-lg-2">
+        <input type="date" class="form-control" name="endDate" #EDate="ngModel" [(ngModel)]="GenericMetricInput.endDate" placeholder="MM-DD-YYYY">
+        <div class="validation-error" *ngIf="EDate.invalid && EDate.touched">
+          This Field is Required.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-row pull-right">
+        <div class="form-group">
+          <button [disabled]="!gmForm.valid" type="submit" class="btn btn-primary btn-info">
+            <i class="fa fa-floppy-o"></i> Submit</button>
+        </div>
+
+        <div class="form-group" style="margin-left:30px">
+          <button type="button" class="btn btn-primary btn-info" (click)="resetForm(gmForm)">
+            <i class="fa fa-repeat"></i> Reset</button>
+        </div>
+      </div>
+      <div class="form-group col-md-1" style="margin-left:43%" >
+        <button type="button" class="btn btn-primary btn-info" (click)="onDownload(gmForm)">
+          <i class="fa fa-download"></i> Excel</button>
+      </div>
+    </div>
+  </form>
+  <div class="container container-table">
+    <table class="table table-bordered table-hover table-striped thead-light">
+      <tr style="background-color:#008ae6">
+        <td>EventInterval</td>
+        <!-- <td>From</td>
+        <td>To </td> -->
+        <td>Total_no#_of_volunteers</td>
+        <td>Total_Volunteer_Hours</td>
+        <td>Total Travel Hours</td>
+        <td>Overall Volunteering Hours</td>
+
+      </tr>
+      <tr *ngFor="let metric of GenericMetricList">
+        <td>{{metric.eventInterval}}</td>
+        <!-- <td>{{metric.startDate}}</td>
+        <td>{{metric.endDate}}</td> -->
+        <td>{{metric.Totalnoofvolunteers}}</td>
+        <td>{{metric.TotalVolunteerHours}}</td>
+        <td>{{metric.TotalTravelHours}}</td>
+        <td>{{metric.OverallVolunteeringHours}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>

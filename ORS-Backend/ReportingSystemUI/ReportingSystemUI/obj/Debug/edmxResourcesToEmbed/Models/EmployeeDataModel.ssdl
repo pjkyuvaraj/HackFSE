@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="EmpCode" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Office" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.EventBenificaryDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventBenificaryDetails">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="int" Nullable="false" />
+    <Property Name="BaseLocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="CouncilName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BenificaryName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.EventDateDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventDateDetails">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="int" Nullable="false" />
+    <Property Name="EventDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="ReportingSystemModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventBenificaryDetails" EntityType="Self.EventBenificaryDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventBenificaryDetails].[EventID] AS [EventID], 
+    [EventBenificaryDetails].[BaseLocation] AS [BaseLocation], 
+    [EventBenificaryDetails].[CouncilName] AS [CouncilName], 
+    [EventBenificaryDetails].[BenificaryName] AS [BenificaryName]
+    FROM [dbo].[EventBenificaryDetails] AS [EventBenificaryDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventDateDetails" EntityType="Self.EventDateDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventDateDetails].[EventID] AS [EventID], 
+    [EventDateDetails].[EventDate] AS [EventDate]
+    FROM [dbo].[EventDateDetails] AS [EventDateDetails]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

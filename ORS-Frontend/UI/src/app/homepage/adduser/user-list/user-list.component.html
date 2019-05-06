@@ -1,0 +1,29 @@
+
+<table class="table table-bordered table-hover table-striped thead-light">
+  <tr style="background-color:#008ae6;color: white">
+    <td>ID</td>
+    <td>AssociateID</td>
+    <td>AssociateName</td>
+    <td>Designation</td>
+    <td>Location</td>
+    <td>BU</td>
+    <td>Status</td>
+  </tr>
+  <tr *ngFor="let user of userService.userList">
+    <td>{{user.ID}}</td>
+    <td>{{user.AssociateID}}</td>
+    <td>{{user.AssociateName}}</td>
+    <td>{{user.Designation}}</td>
+    <td>{{user.Location}}</td>
+    <td>{{user.BU}}</td>
+    <td>{{user.IsDeleted == true?"InActive":"Active"}}</td>
+    <td>
+      <!-- <a class="btn" (click)="showForEdit(user)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a> -->
+      <a class="btn text-danger" (click)="onDelete(user.ID)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

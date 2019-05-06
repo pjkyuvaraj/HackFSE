@@ -1,0 +1,69 @@
+<div class="containertop">
+  <div class="page-header">
+    <h3>Participation metrics</h3>
+  </div>
+  <form #reportForm="ngForm" class="formclass" (ngSubmit)="onSubmit(reportForm)">
+
+    <div class="form-row">
+      <ng-template #bl let-c="result" let-t="term">
+        <ngb-highlight [result]="c.BaseLocation" [term]="t"></ngb-highlight>
+      </ng-template>
+      <div class="form-group col-md-2">
+        <!-- <label for="typeahead-template">Search for a base Location:</label> -->
+        <input name="combobox" id="typeahead-BaseLocation" type="text" class="form-control"
+          [(ngModel)]="modelBaseLocation" [ngbTypeahead]="BaseLocationSearch"
+          (focusBaseLocation)="focusBaseLocation$.next($event.target.value)"
+          (clickBaseLocation)="clickBaseLocation$.next($event.target.value)" #instanceBaseLocation="ngbTypeahead"
+          [inputFormatter]="BaseLocationformatter" [resultTemplate]="bl" placeholder="Search for a Base Location" />
+      </div>
+
+      <ng-template #bu let-c="result" let-t="term">
+        <ngb-highlight [result]="c.BusinessUnit" [term]="t"></ngb-highlight>
+      </ng-template>
+      <div class="form-group col-md-2">
+        <!-- <label for="typeahead-template">Search for a base Location:</label> -->
+        <input name="combobox" id="typeahead-BusinessUnit" type="text" class="form-control"
+          [(ngModel)]="modelBusinessUnit" [ngbTypeahead]="BusinessUnitSearch"
+          (focusBusinessUnit)="focusBusinessUnit$.next($event.target.value)"
+          (clickBusinessUnit)="clickBusinessUnit$.next($event.target.value)" #instanceBaseLocation="ngbTypeahead"
+          [inputFormatter]="BusinessUnitformatter" [resultTemplate]="bu" placeholder="Search for Business Unit" />
+      </div>
+      <div class="form-group col-md-2">
+        <input type="date" class="form-control" name="startDate" #sdate="ngModel" [(ngModel)]="startDate"
+          placeholder="MM-DD-YYYY" required>
+        <div class="validation-error" *ngIf="sdate.invalid && sdate.touched">
+          This Field is Required.</div>
+      </div>
+
+      <div class="form-group col-md-2">
+        <input type="date" class="form-control" name="endDate" #edate="ngModel" [(ngModel)]="endDate"
+          placeholder="MM-DD-YYYY" required>
+        <div class="validation-error" *ngIf="edate.invalid && edate.touched">
+          This Field is Required.</div>
+      </div>
+      <div class="form-group col-md-1" >
+        <button type="submit" class="btn btn-primary btn-info">
+          <i class="fa fa-floppy-o"></i> Submit</button>
+      </div>
+
+    </div>
+
+  </form>
+
+  <div class="container container-table">
+    <table class="table table-bordered table-hover table-striped thead-light">
+      <tr style="background-color:#008ae6">
+        <td>Event</td>
+        <td>Total_no#_of_volunteers</td>
+        <td>BusinessUnit</td>
+        
+      </tr>
+      <tr *ngFor="let metric of ParticipationMetricList">
+        <td>{{metric.EventID}}</td>
+          <td>{{metric.Totalnoofvolunteers}}</td>
+                <td>{{metric.BusinessUnit}}</td>
+      </tr>
+    </table>
+
+  </div>
+  <div>

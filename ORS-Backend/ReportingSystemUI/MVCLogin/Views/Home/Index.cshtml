@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    if (Session["Login"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<h2>Index</h2>
+<html>
+<head>
+
+</head>
+<body>
+    <h1> Dash board</h1>
+    <a href=@Url.Action("Logout","Login")>logout</a>
+</body>
+</html>
+

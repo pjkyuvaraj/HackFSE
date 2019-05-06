@@ -1,0 +1,153 @@
+<div class="container container-table">
+  <div class="page-header">
+    <h3>Event Details</h3>
+  </div>
+  <ngb-tabset>
+    <ngb-tab title="Add" class="title mt-5">
+      <ng-template ngbTabContent>
+        <form class="Event-form" #EventForm="ngForm" (ngSubmit)="onSubmit(EventForm)">
+
+          <div class="form-row">
+            <div class="form-group col-md-1">
+              <input class="form-control" name="EventID" #EventID="ngModel" [(ngModel)]="eventData.EventID" placeholder="EventID" required>
+              <div class="validation-error" *ngIf="EventID.invalid && EventID.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-2">
+              <input class="form-control" name="EventName" #EventName="ngModel" [(ngModel)]="eventData.EventName" placeholder="EventName"
+                required>
+              <div class="validation-error" *ngIf="EventName.invalid && EventName.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-2">
+              <input type="date" class="form-control" name="EventDate" #date="ngModel" [(ngModel)]="eventData.EventDate" placeholder="MM-DD-YYYY"
+                required>
+              <div class="validation-error" *ngIf="date.invalid && date.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <input class="form-control" name="EventDescription" #Description="ngModel" [(ngModel)]="eventData.EventDescription" placeholder="Description"
+                required>
+              <div class="validation-error" *ngIf="Description.invalid && Description.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-lg-2">
+              <select class="form-control" name="Status" [(ngModel)]="eventData.Status" required>
+                <option value="" [selected]="isSelected">---SELECT Status---</option>
+                <option *ngFor="let opt of ['Approved','Rejected','Pending']" [value]="opt">{{opt}}</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="form-row">
+
+            <div class="form-group col-md-2">
+              <input class="form-control" name="BaseLocation" #BaseLocation="ngModel" [(ngModel)]="eventData.BaseLocation" placeholder="Base Location"
+                required>
+              <div class="validation-error" *ngIf="BaseLocation.invalid && BaseLocation.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-2">
+              <input class="form-control" name="BeneficiaryName" #Befin="ngModel" [(ngModel)]="eventData.BeneficiaryName" placeholder="BeneficiaryName"
+                required>
+              <div class="validation-error" *ngIf="Befin.invalid && Befin.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-2">
+              <input class="form-control" name="Category" #Category="ngModel" [(ngModel)]="eventData.Category" placeholder="Category" required>
+              <div class="validation-error" *ngIf="Category.invalid && Category.touched">
+                This Field is Required.</div>
+            </div>
+            <div class="form-group col-md-2">
+              <input class="form-control" name="VenueAddress" #VenueAddress="ngModel" [(ngModel)]="eventData.VenueAddress" placeholder="VenueAddress"
+                required>
+              <div class="validation-error" *ngIf="VenueAddress.invalid && VenueAddress.touched">
+                This Field is Required.</div>
+            </div>
+          </div>
+          <div class="form-row pull-left">
+            <div class="form-group">
+              <button [disabled]="!EventForm.valid" type="submit" class="btn btn-primary btn-info">
+                <i class="fa fa-floppy-o"></i> Submit</button>
+            </div>
+
+            <div class="form-group" style="margin-left:30px">
+              <button type="button" class="btn btn-primary btn-info" (click)="resetForm(EventForm)">
+                <i class="fa fa-repeat"></i> Reset</button>
+            </div>
+          </div>
+        </form>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Upload" class="title">
+      <ng-template ngbTabContent>
+        <form class="emp-form" #uploadForm="ngForm" (ngSubmit)="onUpload(uploadForm)">
+          <input type="hidden" name="FilePath" #FilePath="ngModel" [(ngModel)]="formData" />
+
+          <div class="form-group">
+            <input #file type="file" class="fileSelect ng-pristine ng-invalid ng-touched" (change)="onFileChange($event)" name="FileName"
+              #FileName="ngModel" [(ngModel)]="fileName" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+              ID="fileSelect" runat="server" required/>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-1">
+              <button [disabled]="!uploadForm.valid" type="submit" class="btn btn-primary btn-info">
+                <i class="fa fa-floppy-o"></i> Upload</button>
+            </div>
+            <div class="form-group col-md-1">
+              <button type="button" class="btn btn-primary btn-info" (click)="resetForm(uploadForm)">
+                <i class="fa fa-repeat"></i> Reset</button>
+            </div>
+
+          </div>
+        </form>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+  
+  <div class="container container-table custom">
+      <div class="form-row pull-right ">
+          <div class="form-group" >
+            <button type="button" class="btn btn-primary btn-info" (click)="onDownload(EventForm)">
+              <i class="fa fa-download"></i> Excel</button>
+          </div>
+        </div>
+    <table class="table table-bordered table-hover table-striped thead-light">
+      <tr style="background-color:#008ae6">
+        <td>EventID</td>
+        <td>EventName</td>
+        <td>EventDate</td>
+        <td>EventDescription</td>
+        <td>Status</td>
+        <td>BaseLocation</td>
+        <td>BeneficiaryName</td>
+        <td>Project</td>
+        <td>Category</td>
+        <td>VenueAddress</td>
+        <td></td>
+
+      </tr>
+      <tr *ngFor="let event of EventList">
+        <td>{{event.EventID}}</td>
+        <td>{{event.EventName}}</td>
+        <td>{{event.EventDate}}</td>
+        <td>{{event.EventDescription}}</td>
+        <td>{{event.Status}}</td>
+        <td>{{event.BaseLocation}}</td>
+        <td>{{event.BeneficiaryName}}</td>
+        <td>{{event.Project}}</td>
+        <td>{{event.Category}}</td>
+        <td>{{event.VenueAddress}}</td>
+
+
+        <td>
+
+          <a class="btn text-danger" (click)="onDelete(event.EventID)">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>

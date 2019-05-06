@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AssociateDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssociateID" Type="int" />
+    <Property Name="AssociateName" Type="varchar" MaxLength="100" />
+    <Property Name="Designation" Type="varchar" MaxLength="500" />
+    <Property Name="Location" Type="varchar" MaxLength="100" />
+    <Property Name="BU" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.BaseLocations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BaseLocations">
+    <Key>
+      <PropertyRef Name="BaseLocationID" />
+      <PropertyRef Name="BaseLocation" />
+    </Key>
+    <Property Name="BaseLocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BaseLocation" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.BusinessUnits' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BusinessUnits">
+    <Key>
+      <PropertyRef Name="BusinessUnitID" />
+      <PropertyRef Name="BusinessUnit" />
+    </Key>
+    <Property Name="BusinessUnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessUnit" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Emailaddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EventID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailStatus" Type="bit" />
+    <Property Name="EmailType" Type="varchar" MaxLength="100" />
+    <Property Name="GeneratedDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_Details">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="100" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Event_Details">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EventName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="200" />
+    <Property Name="Location" Type="varchar" MaxLength="100" />
+    <Property Name="EventDate" Type="date" />
+    <Property Name="EventDescription" Type="varchar(max)" />
+    <Property Name="NoofVolunteers" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.EventBenificaryDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventBenificaryDetails">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="int" Nullable="false" />
+    <Property Name="BaseLocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="CouncilName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BenificaryName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.EventSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventSummary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Month" Type="nvarchar" MaxLength="255" />
+    <Property Name="BaseLocation" Type="nvarchar" MaxLength="255" />
+    <Property Name="BeneficiaryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="VenueAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="CouncilName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Project" Type="nvarchar" MaxLength="255" />
+    <Property Name="Category" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventName" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventDescription" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventDate" Type="datetime" />
+    <Property Name="TotalNoOfVolunteers" Type="float" />
+    <Property Name="TotalVolunteerHours" Type="float" />
+    <Property Name="TotalTravelHours" Type="float" />
+    <Property Name="OverallVolunteeringHours" Type="float" />
+    <Property Name="LivesImpacted" Type="float" />
+    <Property Name="ActivityType" Type="float" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="POCID" Type="nvarchar" MaxLength="255" />
+    <Property Name="POCName" Type="nvarchar" MaxLength="255" />
+    <Property Name="POCContact Number" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsProcessed" Type="bit" />
+  </EntityType>
+  <EntityType Name="EventVolunteerDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventID" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="100" />
+    <Property Name="BU" Type="varchar" MaxLength="100" />
+    <Property Name="VolunteerHours" Type="int" />
+    <Property Name="TravelHours" Type="int" />
+    <Property Name="LivesImpacted" Type="int" />
+  </EntityType>
+  <EntityType Name="LoginDetails">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserRole" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Master_EmailContent">
+    <Key>
+      <PropertyRef Name="EmailContentID" />
+    </Key>
+    <Property Name="EmailContentID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailContentName" Type="varchar" MaxLength="100" />
+    <Property Name="EmailContentLocation" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.MasterBeneficiary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MasterBeneficiary">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Beneficiary" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.MasterCountry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MasterCountry">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Country" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.MasterEvent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MasterEvent">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EventName" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EventName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.OutReachEventInformation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OutReachEventInformation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventID" Type="nvarchar" MaxLength="255" />
+    <Property Name="BaseLocation" Type="nvarchar" MaxLength="255" />
+    <Property Name="BeneficiaryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CouncilName" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventName" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventDescription" Type="nvarchar" MaxLength="255" />
+    <Property Name="EventDate" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeID" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="255" />
+    <Property Name="VolunteerHours" Type="float" />
+    <Property Name="TravelHours" Type="float" />
+    <Property Name="LivesImpacted" Type="float" />
+    <Property Name="BusinessUnit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="IIEPCategory" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsProcessed" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ReportingSystem.dbo.POC_Credential' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="POC_Credential">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POC_Info">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="EventID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_details">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="MailId" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="int" />
+    <Property Name="Gender" Type="varchar" MaxLength="100" />
+    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <Association Name="FK__POC_Crede__Emplo__693CA210">
+    <End Role="Employee_Details" Type="Self.Employee_Details" Multiplicity="1" />
+    <End Role="POC_Credential" Type="Self.POC_Credential" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Details">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="POC_Credential">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__POC_Info__Employ__6A30C649">
+    <End Role="Employee_Details" Type="Self.Employee_Details" Multiplicity="1" />
+    <End Role="POC_Info" Type="Self.POC_Info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Details">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="POC_Info">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spDeleteEventDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spEngagementMetrics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Interval" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetEventDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetGenericMetrics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Interval" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spGetParticipantMetrics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BUnit" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spInsertEventDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventDetailsInfoXml" Type="xml" Mode="In" />
+  </Function>
+  <EntityContainer Name="ReportingSystemModelStoreContainer">
+    <EntitySet Name="AssociateDetails" EntityType="Self.AssociateDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Details" EntityType="Self.Employee_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event_Details" EntityType="Self.Event_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventVolunteerDetails" EntityType="Self.EventVolunteerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginDetails" EntityType="Self.LoginDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Master_EmailContent" EntityType="Self.Master_EmailContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POC_Info" EntityType="Self.POC_Info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_details" EntityType="Self.User_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BaseLocations" EntityType="Self.BaseLocations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BaseLocations].[BaseLocationID] AS [BaseLocationID], 
+    [BaseLocations].[BaseLocation] AS [BaseLocation]
+    FROM [dbo].[BaseLocations] AS [BaseLocations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BusinessUnits" EntityType="Self.BusinessUnits" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BusinessUnits].[BusinessUnitID] AS [BusinessUnitID], 
+    [BusinessUnits].[BusinessUnit] AS [BusinessUnit]
+    FROM [dbo].[BusinessUnits] AS [BusinessUnits]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventBenificaryDetails" EntityType="Self.EventBenificaryDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventBenificaryDetails].[EventID] AS [EventID], 
+    [EventBenificaryDetails].[BaseLocation] AS [BaseLocation], 
+    [EventBenificaryDetails].[CouncilName] AS [CouncilName], 
+    [EventBenificaryDetails].[BenificaryName] AS [BenificaryName]
+    FROM [dbo].[EventBenificaryDetails] AS [EventBenificaryDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventSummary" EntityType="Self.EventSummary" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventSummary].[ID] AS [ID], 
+    [EventSummary].[EventID] AS [EventID], 
+    [EventSummary].[Month] AS [Month], 
+    [EventSummary].[BaseLocation] AS [BaseLocation], 
+    [EventSummary].[BeneficiaryName] AS [BeneficiaryName], 
+    [EventSummary].[VenueAddress] AS [VenueAddress], 
+    [EventSummary].[CouncilName] AS [CouncilName], 
+    [EventSummary].[Project] AS [Project], 
+    [EventSummary].[Category] AS [Category], 
+    [EventSummary].[EventName] AS [EventName], 
+    [EventSummary].[EventDescription] AS [EventDescription], 
+    [EventSummary].[EventDate] AS [EventDate], 
+    [EventSummary].[TotalNoOfVolunteers] AS [TotalNoOfVolunteers], 
+    [EventSummary].[TotalVolunteerHours] AS [TotalVolunteerHours], 
+    [EventSummary].[TotalTravelHours] AS [TotalTravelHours], 
+    [EventSummary].[OverallVolunteeringHours] AS [OverallVolunteeringHours], 
+    [EventSummary].[LivesImpacted] AS [LivesImpacted], 
+    [EventSummary].[ActivityType] AS [ActivityType], 
+    [EventSummary].[Status] AS [Status], 
+    [EventSummary].[POCID] AS [POCID], 
+    [EventSummary].[POCName] AS [POCName], 
+    [EventSummary].[POCContact Number] AS [POCContact Number], 
+    [EventSummary].[IsProcessed] AS [IsProcessed]
+    FROM [dbo].[EventSummary] AS [EventSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MasterBeneficiary" EntityType="Self.MasterBeneficiary" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MasterBeneficiary].[ID] AS [ID], 
+    [MasterBeneficiary].[Beneficiary] AS [Beneficiary]
+    FROM [dbo].[MasterBeneficiary] AS [MasterBeneficiary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MasterCountry" EntityType="Self.MasterCountry" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MasterCountry].[ID] AS [ID], 
+    [MasterCountry].[Country] AS [Country]
+    FROM [dbo].[MasterCountry] AS [MasterCountry]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MasterEvent" EntityType="Self.MasterEvent" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MasterEvent].[ID] AS [ID], 
+    [MasterEvent].[EventID] AS [EventID], 
+    [MasterEvent].[EventName] AS [EventName]
+    FROM [dbo].[MasterEvent] AS [MasterEvent]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OutReachEventInformation" EntityType="Self.OutReachEventInformation" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OutReachEventInformation].[ID] AS [ID], 
+    [OutReachEventInformation].[EventID] AS [EventID], 
+    [OutReachEventInformation].[BaseLocation] AS [BaseLocation], 
+    [OutReachEventInformation].[BeneficiaryName] AS [BeneficiaryName], 
+    [OutReachEventInformation].[CouncilName] AS [CouncilName], 
+    [OutReachEventInformation].[EventName] AS [EventName], 
+    [OutReachEventInformation].[EventDescription] AS [EventDescription], 
+    [OutReachEventInformation].[EventDate] AS [EventDate], 
+    [OutReachEventInformation].[EmployeeID] AS [EmployeeID], 
+    [OutReachEventInformation].[EmployeeName] AS [EmployeeName], 
+    [OutReachEventInformation].[VolunteerHours] AS [VolunteerHours], 
+    [OutReachEventInformation].[TravelHours] AS [TravelHours], 
+    [OutReachEventInformation].[LivesImpacted] AS [LivesImpacted], 
+    [OutReachEventInformation].[BusinessUnit] AS [BusinessUnit], 
+    [OutReachEventInformation].[Status] AS [Status], 
+    [OutReachEventInformation].[IIEPCategory] AS [IIEPCategory], 
+    [OutReachEventInformation].[IsProcessed] AS [IsProcessed]
+    FROM [dbo].[OutReachEventInformation] AS [OutReachEventInformation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="POC_Credential" EntityType="Self.POC_Credential" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [POC_Credential].[EmployeeID] AS [EmployeeID], 
+    [POC_Credential].[Password] AS [Password]
+    FROM [dbo].[POC_Credential] AS [POC_Credential]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__POC_Crede__Emplo__693CA210" Association="Self.FK__POC_Crede__Emplo__693CA210">
+      <End Role="Employee_Details" EntitySet="Employee_Details" />
+      <End Role="POC_Credential" EntitySet="POC_Credential" />
+    </AssociationSet>
+    <AssociationSet Name="FK__POC_Info__Employ__6A30C649" Association="Self.FK__POC_Info__Employ__6A30C649">
+      <End Role="Employee_Details" EntitySet="Employee_Details" />
+      <End Role="POC_Info" EntitySet="POC_Info" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

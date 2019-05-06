@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReportingSystemModelStoreContainer" CdmEntityContainer="ReportingSystemDBEntities">
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Emailaddress" ColumnName="Emailaddress" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EmailStatus" ColumnName="EmailStatus" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+          <ScalarProperty Name="GeneratedDate" ColumnName="GeneratedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Details">
+      <EntityTypeMapping TypeName="ReportingSystemModel.Employee_Details">
+        <MappingFragment StoreEntitySet="Employee_Details">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Event_Details">
+      <EntityTypeMapping TypeName="ReportingSystemModel.Event_Details">
+        <MappingFragment StoreEntitySet="Event_Details">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="NoofVolunteers" ColumnName="NoofVolunteers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POC_Info">
+      <EntityTypeMapping TypeName="ReportingSystemModel.POC_Info">
+        <MappingFragment StoreEntitySet="POC_Info">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterBeneficiaries">
+      <EntityTypeMapping TypeName="ReportingSystemModel.MasterBeneficiary">
+        <MappingFragment StoreEntitySet="MasterBeneficiary">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterCountries">
+      <EntityTypeMapping TypeName="ReportingSystemModel.MasterCountry">
+        <MappingFragment StoreEntitySet="MasterCountry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterEvents">
+      <EntityTypeMapping TypeName="ReportingSystemModel.MasterEvent">
+        <MappingFragment StoreEntitySet="MasterEvent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POC_Credential">
+      <EntityTypeMapping TypeName="ReportingSystemModel.POC_Credential">
+        <MappingFragment StoreEntitySet="POC_Credential">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_details">
+      <EntityTypeMapping TypeName="ReportingSystemModel.User_details">
+        <MappingFragment StoreEntitySet="User_details">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaseLocations">
+      <EntityTypeMapping TypeName="ReportingSystemModel.BaseLocations">
+        <MappingFragment StoreEntitySet="BaseLocations">
+          <ScalarProperty Name="BaseLocation" ColumnName="BaseLocation" />
+          <ScalarProperty Name="BaseLocationID" ColumnName="BaseLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessUnits">
+      <EntityTypeMapping TypeName="ReportingSystemModel.BusinessUnits">
+        <MappingFragment StoreEntitySet="BusinessUnits">
+          <ScalarProperty Name="BusinessUnit" ColumnName="BusinessUnit" />
+          <ScalarProperty Name="BusinessUnitID" ColumnName="BusinessUnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventSummary">
+      <EntityTypeMapping TypeName="ReportingSystemModel.EventSummary">
+        <MappingFragment StoreEntitySet="EventSummary">
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="POCContact_Number" ColumnName="POCContact Number" />
+          <ScalarProperty Name="POCName" ColumnName="POCName" />
+          <ScalarProperty Name="POCID" ColumnName="POCID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="LivesImpacted" ColumnName="LivesImpacted" />
+          <ScalarProperty Name="OverallVolunteeringHours" ColumnName="OverallVolunteeringHours" />
+          <ScalarProperty Name="TotalTravelHours" ColumnName="TotalTravelHours" />
+          <ScalarProperty Name="TotalVolunteerHours" ColumnName="TotalVolunteerHours" />
+          <ScalarProperty Name="TotalNoOfVolunteers" ColumnName="TotalNoOfVolunteers" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="CouncilName" ColumnName="CouncilName" />
+          <ScalarProperty Name="VenueAddress" ColumnName="VenueAddress" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="BaseLocation" ColumnName="BaseLocation" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OutReachEventInformation">
+      <EntityTypeMapping TypeName="ReportingSystemModel.OutReachEventInformation">
+        <MappingFragment StoreEntitySet="OutReachEventInformation">
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="IIEPCategory" ColumnName="IIEPCategory" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BusinessUnit" ColumnName="BusinessUnit" />
+          <ScalarProperty Name="LivesImpacted" ColumnName="LivesImpacted" />
+          <ScalarProperty Name="TravelHours" ColumnName="TravelHours" />
+          <ScalarProperty Name="VolunteerHours" ColumnName="VolunteerHours" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="CouncilName" ColumnName="CouncilName" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="BaseLocation" ColumnName="BaseLocation" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssociateDetails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.AssociateDetails">
+        <MappingFragment StoreEntitySet="AssociateDetails">
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="AssociateName" ColumnName="AssociateName" />
+          <ScalarProperty Name="AssociateID" ColumnName="AssociateID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetEventDetails" FunctionName="ReportingSystemModel.Store.spGetEventDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportingSystemModel.EventDetailsSummary">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BaseLocation" ColumnName="BaseLocation" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="VenueAddress" ColumnName="VenueAddress" />
+          <ScalarProperty Name="TotalVolunteers" ColumnName="TotalVolunteers" />
+          <ScalarProperty Name="TotalVolunteerHours" ColumnName="TotalVolunteerHours" />
+          <ScalarProperty Name="TotalTravelHours" ColumnName="TotalTravelHours" />
+          <ScalarProperty Name="OverallVolunteerHours" ColumnName="OverallVolunteerHours" />
+          <ScalarProperty Name="LivesImpacted" ColumnName="LivesImpacted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertEventDetails" FunctionName="ReportingSystemModel.Store.spInsertEventDetails" />
+    <FunctionImportMapping FunctionImportName="spDeleteEventDetails" FunctionName="ReportingSystemModel.Store.spDeleteEventDetails" />
+    <FunctionImportMapping FunctionImportName="spEngagementMetrics" FunctionName="ReportingSystemModel.Store.spEngagementMetrics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportingSystemModel.EngagementMetricReport">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGenericMetrics" FunctionName="ReportingSystemModel.Store.spGetGenericMetrics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportingSystemModel.GenericMetricsReport">
+          <ScalarProperty Name="TotalNoOfVolunteers" ColumnName="TotalNoOfVolunteers" />
+          <ScalarProperty Name="TotalVolunteerHours" ColumnName="TotalVolunteerHours" />
+          <ScalarProperty Name="TotalTravelHours" ColumnName="TotalTravelHours" />
+          <ScalarProperty Name="OverallVolunteeringHours" ColumnName="OverallVolunteeringHours" />
+          <ScalarProperty Name="IntervalRange" ColumnName="IntervalRange" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="LoginDetails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.LoginDetails">
+        <MappingFragment StoreEntitySet="LoginDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventVolunteerDetails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.EventVolunteerDetails">
+        <MappingFragment StoreEntitySet="EventVolunteerDetails">
+          <ScalarProperty Name="LivesImpacted" ColumnName="LivesImpacted" />
+          <ScalarProperty Name="TravelHours" ColumnName="TravelHours" />
+          <ScalarProperty Name="VolunteerHours" ColumnName="VolunteerHours" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetParticipantMetrics" FunctionName="ReportingSystemModel.Store.spGetParticipantMetrics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportingSystemModel.ParticipantMetrics">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="BusinessUint" ColumnName="BusinessUint" />
+          <ScalarProperty Name="TotalNoOfVolunteers" ColumnName="TotalNoOfVolunteers" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1b90ef18f1b44f1852916187e99f9ef" Name="Diagram1">
+        <EntityTypeShape EntityType="ReportingSystemModel.Email" Width="1.5" PointX="8.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.Employee_Details" Width="1.5" PointX="5.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.Event_Details" Width="1.5" PointX="2.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.POC_Info" Width="1.5" PointX="8" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.MasterBeneficiary" Width="1.5" PointX="10.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.MasterCountry" Width="1.5" PointX="12.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.MasterEvent" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportingSystemModel.POC_Credential" Width="1.5" PointX="8" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="ReportingSystemModel.FK__POC_Crede__Emplo__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ReportingSystemModel.FK__POC_Info__Employ__6A30C649" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ReportingSystemModel.User_details" Width="1.5" PointX="13.375" PointY="5.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.BaseLocations" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.BusinessUnits" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.EventSummary" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.OutReachEventInformation" Width="1.5" PointX="10.375" PointY="6.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.AssociateDetails" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.LoginDetails" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ReportingSystemModel.EventVolunteerDetails" Width="1.5" PointX="0.75" PointY="3.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

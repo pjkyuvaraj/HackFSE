@@ -1,0 +1,13 @@
+html, body, .container-table {
+    height: 100%;
+    overflow-y: hidden;
+}
+.container-table {
+    display: table;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}

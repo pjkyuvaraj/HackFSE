@@ -1,0 +1,48 @@
+<div class="containertop">
+  <div class="page-header">
+    <h3>Engagement Metrics</h3>
+  </div>
+  <form class="form-class" #EngForm="ngForm" (ngSubmit)="onSubmit(EngForm)">
+    <div class="row">
+      <div class="form-group">
+        Select Type :
+      </div>
+      <div class="form-group col-lg-2">
+        <select class="form-control" name="Interval" (ngModelChange)="onChange($event)" [(ngModel)]="EngagementMetric.Interval" required>
+          <option value="">---SELECT---</option>
+          <option value="0">0- 1 Times</option>
+          <option value="1">2-5 Times</option>
+          <option value="2">> 5 Times</option>
+          <!-- <option *ngFor="let opt of intervalvalues" [value]="opt">{{opt|uppercase}}</option> -->
+        </select>
+      </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-1" style="margin-left:43%" >
+            <button type="button" class="btn btn-primary btn-info" (click)="onDownload(EngForm)">
+              <i class="fa fa-download"></i> Excel</button>
+          </div>
+    </div>
+
+  </form>
+  <div class="container container-table">
+    <table class="table table-bordered table-hover table-striped thead-light">
+      <tr style="background-color:#008ae6">
+        <!-- <td>Interval</td> -->
+        <td>EmployeeID</td>
+        <td>EmployeeName</td> 
+        <td>Count</td>
+        
+      </tr>
+      <tr *ngFor="let metric of EngagementMetricList">
+        <!-- <td>{{metric.Interval}}</td> -->
+         <td>{{metric.EmployeeID}}</td>
+        <td>{{metric.EmployeeName}}</td> 
+        <td>{{metric.Count}}</td>
+        
+      </tr>
+    </table>
+
+  </div>
+
+</div>

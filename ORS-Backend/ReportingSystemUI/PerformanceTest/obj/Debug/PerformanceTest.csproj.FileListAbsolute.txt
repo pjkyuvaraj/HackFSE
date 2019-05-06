@@ -1,0 +1,8 @@
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\bin\Debug\PerformanceTest.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\bin\Debug\PerformanceTest.pdb
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\bin\Debug\NBench.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\obj\Debug\PerformanceTest.csproj.CoreCompileInputs.cache
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\obj\Debug\PerformanceTest.csproj.CopyComplete
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\obj\Debug\PerformanceTest.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\obj\Debug\PerformanceTest.pdb
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\PerformanceTest\obj\Debug\PerformanceTest.csprojAssemblyReference.cache

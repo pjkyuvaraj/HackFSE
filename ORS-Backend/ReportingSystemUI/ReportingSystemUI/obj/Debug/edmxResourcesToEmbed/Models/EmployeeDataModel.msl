@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReportingSystemModelStoreContainer" CdmEntityContainer="ReportingSystemEntities">
+    <EntitySetMapping Name="EventBenificaryDetails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.EventBenificaryDetail">
+        <MappingFragment StoreEntitySet="EventBenificaryDetails">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="BaseLocation" ColumnName="BaseLocation" />
+          <ScalarProperty Name="CouncilName" ColumnName="CouncilName" />
+          <ScalarProperty Name="BenificaryName" ColumnName="BenificaryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventDateDetails">
+      <EntityTypeMapping TypeName="ReportingSystemModel.EventDateDetail">
+        <MappingFragment StoreEntitySet="EventDateDetails">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ReportingSystemModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportingSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="Emailaddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EventID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailStatus" Type="Boolean" />
+    <Property Name="EmailType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GeneratedDate" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Employee_Details">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="POC_Credential" Relationship="Self.FK__POC_Crede__Emplo__693CA210" FromRole="Employee_Details" ToRole="POC_Credential" />
+    <NavigationProperty Name="POC_Info" Relationship="Self.FK__POC_Info__Employ__6A30C649" FromRole="Employee_Details" ToRole="POC_Info" />
+  </EntityType>
+  <EntityType Name="Event_Details">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EventName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Beneficiary" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EventDate" Type="DateTime" Precision="0" />
+    <Property Name="EventDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NoofVolunteers" Type="Int32" />
+  </EntityType>
+  <EntityType Name="POC_Info">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="EventID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employee_Details" Relationship="Self.FK__POC_Info__Employ__6A30C649" FromRole="POC_Info" ToRole="Employee_Details" />
+  </EntityType>
+  <EntityType Name="MasterBeneficiary">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Beneficiary" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Beneficiary" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterCountry">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Country" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterEvent">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EventName" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EventName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POC_Credential">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employee_Details" Relationship="Self.FK__POC_Crede__Emplo__693CA210" FromRole="POC_Credential" ToRole="Employee_Details" />
+  </EntityType>
+  <Association Name="FK__POC_Crede__Emplo__693CA210">
+    <End Role="Employee_Details" Type="Self.Employee_Details" Multiplicity="1" />
+    <End Role="POC_Credential" Type="Self.POC_Credential" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Details">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="POC_Credential">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__POC_Info__Employ__6A30C649">
+    <End Role="Employee_Details" Type="Self.Employee_Details" Multiplicity="1" />
+    <End Role="POC_Info" Type="Self.POC_Info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Details">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="POC_Info">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ReportingSystemDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emails" EntityType="Self.Email" />
+    <EntitySet Name="Employee_Details" EntityType="Self.Employee_Details" />
+    <EntitySet Name="Event_Details" EntityType="Self.Event_Details" />
+    <EntitySet Name="POC_Info" EntityType="Self.POC_Info" />
+    <EntitySet Name="MasterBeneficiaries" EntityType="Self.MasterBeneficiary" />
+    <EntitySet Name="MasterCountries" EntityType="Self.MasterCountry" />
+    <EntitySet Name="MasterEvents" EntityType="Self.MasterEvent" />
+    <EntitySet Name="POC_Credential" EntityType="Self.POC_Credential" />
+    <AssociationSet Name="FK__POC_Crede__Emplo__693CA210" Association="Self.FK__POC_Crede__Emplo__693CA210">
+      <End Role="Employee_Details" EntitySet="Employee_Details" />
+      <End Role="POC_Credential" EntitySet="POC_Credential" />
+    </AssociationSet>
+    <AssociationSet Name="FK__POC_Info__Employ__6A30C649" Association="Self.FK__POC_Info__Employ__6A30C649">
+      <End Role="Employee_Details" EntitySet="Employee_Details" />
+      <End Role="POC_Info" EntitySet="POC_Info" />
+    </AssociationSet>
+    <EntitySet Name="User_details" EntityType="ReportingSystemModel.User_details" />
+    <EntitySet Name="BaseLocations" EntityType="ReportingSystemModel.BaseLocations" />
+    <EntitySet Name="BusinessUnits" EntityType="ReportingSystemModel.BusinessUnits" />
+    <EntitySet Name="EventSummary" EntityType="ReportingSystemModel.EventSummary" />
+    <EntitySet Name="OutReachEventInformation" EntityType="ReportingSystemModel.OutReachEventInformation" />
+    <EntitySet Name="AssociateDetails" EntityType="ReportingSystemModel.AssociateDetails" />
+    <FunctionImport Name="spGetEventDetails" ReturnType="Collection(ReportingSystemModel.EventDetailsSummary)">
+      <Parameter Name="EventId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertEventDetails">
+      <Parameter Name="EventDetailsInfoXml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteEventDetails">
+      <Parameter Name="EventId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spEngagementMetrics" ReturnType="Collection(ReportingSystemModel.EngagementMetricReport)">
+      <Parameter Name="Interval" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetGenericMetrics" ReturnType="Collection(ReportingSystemModel.GenericMetricsReport)">
+      <Parameter Name="Interval" Mode="In" Type="Int32" />
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="LoginDetails" EntityType="ReportingSystemModel.LoginDetails" />
+    <EntitySet Name="EventVolunteerDetails" EntityType="ReportingSystemModel.EventVolunteerDetails" />
+    <FunctionImport Name="spGetParticipantMetrics" ReturnType="Collection(ReportingSystemModel.ParticipantMetrics)">
+      <Parameter Name="BUnit" Mode="In" Type="String" />
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="User_details">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="BaseLocations">
+    <Key>
+      <PropertyRef Name="BaseLocationID" />
+      <PropertyRef Name="BaseLocation" />
+    </Key>
+    <Property Name="BaseLocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaseLocation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BusinessUnits">
+    <Key>
+      <PropertyRef Name="BusinessUnitID" />
+      <PropertyRef Name="BusinessUnit" />
+    </Key>
+    <Property Name="BusinessUnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessUnit" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="spGetGenericMetrics_Result">
+    <Property Type="Double" Name="Total_no__of_volunteers" Nullable="true" />
+    <Property Type="Double" Name="Total_Volunteer_Hours" Nullable="true" />
+    <Property Type="Double" Name="Total_Travel_Hours" Nullable="true" />
+    <Property Type="Double" Name="Overall_Volunteering_Hours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spGetGenericMetrics_Result1">
+    <Property Type="Double" Name="Total_no__of_volunteers" Nullable="true" />
+    <Property Type="Double" Name="Total_Volunteer_Hours" Nullable="true" />
+    <Property Type="Double" Name="Total_Travel_Hours" Nullable="true" />
+    <Property Type="Double" Name="Overall_Volunteering_Hours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="EventSummary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Month" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BaseLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="VenueAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CouncilName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Project" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalNoOfVolunteers" Type="Double" />
+    <Property Name="TotalVolunteerHours" Type="Double" />
+    <Property Name="TotalTravelHours" Type="Double" />
+    <Property Name="OverallVolunteeringHours" Type="Double" />
+    <Property Name="LivesImpacted" Type="Double" />
+    <Property Name="ActivityType" Type="Double" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="POCID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="POCName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="POCContact_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="spGetGenericMetrics_Result2">
+    <Property Type="Double" Name="TotalNoOfVolunteers" Nullable="true" />
+    <Property Type="Double" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Double" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Double" Name="OverallVolunteeringHours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GenericMetricsReport">
+    <Property Type="String" Name="TotalNoOfVolunteers" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TotalVolunteerHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TotalTravelHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OverallVolunteeringHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spGetGenericMetrics_Result3">
+    <Property Type="Double" Name="TotalNoOfVolunteers" Nullable="true" />
+    <Property Type="Double" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Double" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Double" Name="OverallVolunteeringHours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spEngagementMetrics_Result">
+    <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="OutReachEventInformation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BaseLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CouncilName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="VolunteerHours" Type="Double" />
+    <Property Name="TravelHours" Type="Double" />
+    <Property Name="LivesImpacted" Type="Double" />
+    <Property Name="BusinessUnit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IIEPCategory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="EngagementMetricReport">
+    <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="AssociateDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssociateID" Type="Int32" />
+    <Property Name="AssociateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Designation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="spGetEventDetails_Result">
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EventName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="EventDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EventDescription" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BaseLocation" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="BeneficiaryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Project" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VenueAddress" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="TotalVolunteers" Nullable="true" />
+    <Property Type="Int32" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Int32" Name="OverallVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="LivesImpacted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="EventDetailsSummary">
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EventName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="EventDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EventDescription" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BaseLocation" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="BeneficiaryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Project" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VenueAddress" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="TotalVolunteers" Nullable="true" />
+    <Property Type="Int32" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Int32" Name="OverallVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="LivesImpacted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spEngagementMetrics_Result1">
+    <Property Type="Int32" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetGenericMetrics_Result4">
+    <Property Type="Int32" Name="TotalNoOfVolunteers" Nullable="true" />
+    <Property Type="Int32" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Int32" Name="OverallVolunteeringHours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spGetGenericMetrics_Result5">
+    <Property Type="Int32" Name="TotalNoOfVolunteers" Nullable="true" />
+    <Property Type="Int32" Name="TotalVolunteerHours" Nullable="true" />
+    <Property Type="Int32" Name="TotalTravelHours" Nullable="true" />
+    <Property Type="Int32" Name="OverallVolunteeringHours" Nullable="true" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spGetGenericMetrics_Result6">
+    <Property Type="String" Name="TotalNoOfVolunteers" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TotalVolunteerHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TotalTravelHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OverallVolunteeringHours" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IntervalRange" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="LoginDetails">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserRole" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EventVolunteerDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="EmployeeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VolunteerHours" Type="Int32" />
+    <Property Name="TravelHours" Type="Int32" />
+    <Property Name="LivesImpacted" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="spGetParticipantMetrics_Result">
+    <Property Type="String" Name="EventID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BusinessUint" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TotalNoOfVolunteers" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ParticipantMetrics">
+    <Property Type="String" Name="EventID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BusinessUint" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TotalNoOfVolunteers" Nullable="true" />
+  </ComplexType>
+</Schema>

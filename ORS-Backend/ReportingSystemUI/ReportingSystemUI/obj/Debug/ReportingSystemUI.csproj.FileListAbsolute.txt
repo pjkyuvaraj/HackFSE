@@ -1,0 +1,172 @@
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Claims.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Razor.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\WebGrease.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Razor.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csproj.CopyComplete
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.pdb
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.dll.config
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\ReportingSystemUI.pdb
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.exe
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.exe.config
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csc.rsp
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.exe
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.exe.config
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\csi.rsp
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.AppContext.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Collections.Immutable.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Console.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Compression.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.FileSystem.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.IO.Pipes.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.AccessControl.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Claims.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.ValueTuple.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XPath.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.exe
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.exe.config
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\vbc.rsp
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\VBCSCompiler.exe
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\roslyn\VBCSCompiler.exe.config
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Antlr3.Runtime.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\EntityFramework.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\EntityFramework.SqlServer.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Newtonsoft.Json.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Net.Http.Formatting.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Helpers.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.Cors.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.WebHost.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Mvc.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Optimization.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Razor.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Deployment.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Razor.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\WebGrease.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\EntityFramework.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\EntityFramework.SqlServer.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Net.Http.Formatting.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.Cors.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Http.WebHost.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Helpers.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Mvc.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Optimization.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.Razor.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Deployment.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Web.WebPages.Razor.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Newtonsoft.Json.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Antlr3.Runtime.pdb
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csprojAssemblyReference.cache
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csproj.CoreCompileInputs.cache
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.csproj.CopyComplete
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.dll
+C:\Project\303249-Hackathon-OutreachReportingSystem\ReportingSystemUI\ReportingSystemUI\obj\Debug\ReportingSystemUI.pdb

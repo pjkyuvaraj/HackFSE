@@ -1,0 +1,85 @@
+<ngb-tabset>
+  <ngb-tab title="Add" class="title mt-5">
+    <ng-template ngbTabContent>
+      <form class="emp-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <input type="hidden" name="ID" #UserID="ngModel" [(ngModel)]="userService.selectedUser.ID">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <input class="form-control" name="AssociateID" #Aid="ngModel" [(ngModel)]="userService.selectedUser.AssociateID" placeholder="Associate ID"
+              required>
+            <div class="validation-error" *ngIf="Aid.invalid && Aid.touched">
+              This Field is Required.</div>
+          </div>
+          <div class="form-group col-md-3">
+            <input class="form-control" name="AssociateName" #Name="ngModel" [(ngModel)]="userService.selectedUser.AssociateName" placeholder="Associate Name"
+              required>
+            <div class="validation-error" *ngIf="Name.invalid && Name.touched">
+              This Field is Required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <input class="form-control" name="Designation" #Desgn="ngModel" [(ngModel)]="userService.selectedUser.Designation" placeholder="Designation"
+              required>
+            <div class="validation-error" *ngIf="Desgn.invalid && Desgn.touched">
+              This Field is Required.</div>
+          </div>
+          <div class="form-group col-md-3">
+            <input class="form-control" name="Location" #Location="ngModel" [(ngModel)]="userService.selectedUser.Location" placeholder="Location"
+              required>
+            <div class="validation-error" *ngIf="Location.invalid && Location.touched">
+              This Field is Required.</div>
+          </div>
+          <div class="form-group col-md-3">
+            <input class="form-control" name="BU" #BU="ngModel" [(ngModel)]="userService.selectedUser.BU" placeholder="Business Unit"
+              required>
+            <div class="validation-error" *ngIf="BU.invalid && BU.touched">
+              This Field is Required.</div>
+          </div>
+          
+          <div class="form-group ml-3">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="admin" [(ngModel)]="userService.selectedUser.IsAdmin" #IsAdmin="ngModel" #isAdmin="ngModel"
+                name="IsAdmin">Admin User</label>
+          </div>
+        </div>
+
+        <div class="form-row pull-left">
+          <div class="form-group">
+            <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary btn-info">
+              <i class="fa fa-floppy-o"></i> Submit</button>
+          </div>
+
+          <div class="form-group" style="margin-left:30px">
+            <button type="button" class="btn btn-primary btn-info" (click)="resetForm(userForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+        
+      </form>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Upload" class="title">
+    <ng-template ngbTabContent>
+      <form class="emp-form" #uploadForm="ngForm" (ngSubmit)="onUpload(uploadForm)">
+        <input type="hidden" name="FilePath" #FilePath="ngModel" [(ngModel)]="formData" />
+
+        <div class="form-group">
+          <input #file type="file" class="fileSelect ng-pristine ng-invalid ng-touched" (change)="onFileChange($event)" name="FileName" #FileName="ngModel" [(ngModel)]="fileName"
+            accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" ID="fileSelect"
+            runat="server" required/>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-0 ">
+            <button [disabled]="!uploadForm.valid" type="submit" class="btn btn-primary btn-info">
+              <i class="fa fa-floppy-o"></i> Upload</button>
+          </div>
+          <div class="form-group col-md-1">
+            <button type="button" class="btn btn-primary btn-info" (click)="resetForm(uploadForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

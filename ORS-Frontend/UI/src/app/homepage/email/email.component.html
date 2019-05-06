@@ -1,0 +1,199 @@
+<div style="text-align:center">
+  <h2 class=" bg-secondary text-white">Feedback Email Page</h2>
+</div>
+<br>
+<br>
+<ngb-tabset>
+  <ngb-tab title="Remainder Email">
+    <ng-template ngbTabContent>
+      <br>
+      <form #remainderForm="ngForm" (ngSubmit)="onSubmitRemainder(remainderForm)">
+        <div class="form-row">
+
+          <div class="form-group input-group width">
+
+            <div>
+              <label>Start Date: </label>
+            </div>
+            <input class="form-control space" name="RemainderStart" [(ngModel)]="m2" #RemainderStart="ngModel"  ngbDatepicker #d1="ngbDatepicker" placeholder="Please use the calendar button to select the date"
+              required #dp="ngModel" [minDate]="{year: 2010, month: 1, day: 1}" [maxDate]="{year: 2019, month: 2, day: 25}">
+            <div class="input-group-append append">
+              <button class="btn btn-outline-secondary fa fa-calendar" (click)="d1.toggle()" type="button"></button>
+            </div>
+
+
+            <div class="calendermargin">
+              <label>End Date: </label>
+            </div>
+
+            <input #dp1="ngModel" class="form-control space" name="RemainderEnd" [(ngModel)]="m1" #RemainderEnd ="ngModel" ngbDatepicker #d2="ngbDatepicker" placeholder="Please use the calendar button to select the date"
+              required [minDate]="{year: 2010, month: 1, day: 1}" [maxDate]="{year: 2019, month: 2, day: 25}">
+            <div class="input-group-append append">
+              <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d2.toggle()" type="button"></button>
+            </div>
+
+            <br>
+
+
+            <div class="calendermargin">
+
+              <ng-template #rt let-r="result" let-t="term">
+                <ngb-highlight [result]="r.EventName" [term]="t"></ngb-highlight>
+              </ng-template>
+
+              <input name="combobox" id="typeahead-focus" type="text" class="form-control" name="RemainderEvent" [(ngModel)]="model" #RemainderEvent= "ngModel" [ngbTypeahead]="search"
+                [resultTemplate]="rt" (focus)="focus$.next($event.target.value)" (click)="click$.next($event.target.value)"
+                #instance="ngbTypeahead" [inputFormatter]="formatter" placeholder="Search for a event" />
+                </div>
+                <div class="calendermargin">
+
+                <ng-template #et let-e="result" let-t="term">
+                    <ngb-highlight [result]="e.name" [term]="t"></ngb-highlight>
+                  </ng-template>
+    
+                  <input name="combobox" id="typeahead-focus" type="text" class="form-control" [(ngModel)]="volunteermodel" name="RemainderVolunteer" #RemainderVolunteer= "ngModel" [ngbTypeahead]="volunteerSearch"
+                    [resultTemplate]="et" 
+                    (focus)="focusvolunteer$.next($event.target.value)" (click)="clickvolunteer$.next($event.target.value)"
+                    #volunteerinstance="ngbTypeahead" [inputFormatter]="volunteerformatter" placeholder="Search for a volunteer" />
+                    
+
+            </div>
+            <div class="form-group  calendermargin">
+              <button type="submit" class="btn btn-primary btn-info">
+                <i class="fa fa-floppy-o"></i> Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+
+          <!-- EmployeeID Column -->
+          <ng-container matColumnDef="EmployeeID">
+            <th mat-header-cell *matHeaderCellDef> EmployeeID </th>
+            <td mat-cell *matCellDef="let element"> {{element.EmployeeID}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="EmployeeName">
+            <th mat-header-cell *matHeaderCellDef> EmployeeName </th>
+            <td mat-cell *matCellDef="let element"> {{element.EmployeeName}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="EmailID">
+            <th mat-header-cell *matHeaderCellDef> EmailID </th>
+            <td mat-cell *matCellDef="let element"> {{element.EmailAddress}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="EventName">
+              <th mat-header-cell *matHeaderCellDef> EventName </th>
+              <td mat-cell *matCellDef="let element"> {{element.EventName}} </td>
+            </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator #scheduledOrdersPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+        </mat-paginator>
+      </div>
+      <br>
+      <button color="accent" mat-flat-button>Trigger Email</button>
+
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Response Email">
+    <ng-template ngbTabContent>
+      <br>
+      <form #responseForm="ngForm"  (ngSubmit)="onSubmitResponse(responseForm)">
+        <div class="form-row">
+
+          <div class="form-group input-group width">
+            <div>
+              <label>Start Date: </label>
+            </div>
+            <input class="form-control space" name="ResponseStart" [(ngModel)]="m2" #ResponseStart="ngModel" ngbDatepicker #d1="ngbDatepicker" placeholder="Please use the calendar button to select the date"
+              required #dp="ngModel" [minDate]="{year: 2010, month: 1, day: 1}" [maxDate]="{year: 2019, month: 2, day: 25}">
+            <div class="input-group-append append">
+              <button class="btn btn-outline-secondary fa fa-calendar" (click)="d1.toggle()" type="button"></button>
+            </div>
+
+
+            <div class="calendermargin">
+              <label>End Date: </label>
+            </div>
+
+            <input #dp1="ngModel" class="form-control space" name="ResponseEnd" [(ngModel)]="m1" #ResponseEnd="ngModel" ngbDatepicker #d2="ngbDatepicker" placeholder="Please use the calendar button to select the date"
+              required [minDate]="{year: 2010, month: 1, day: 1}" [maxDate]="{year: 2019, month: 2, day: 25}">
+            <div class="input-group-append append">
+              <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d2.toggle()" type="button"></button>
+            </div>
+
+            <br>
+
+
+            <div class="calendermargin">
+              <ng-template #rt let-r="result" let-t="term">
+                <ngb-highlight [result]="r.EventName" [term]="t"></ngb-highlight>
+              </ng-template>
+
+              <input name="combobox" id="typeahead-focus" type="text" class="form-control" [(ngModel)]="model" name="ResponseEvent" #ResponseEvent="ngModel" [ngbTypeahead]="search"
+                [resultTemplate]="rt" (focus)="focus$.next($event.target.value)" (click)="click$.next($event.target.value)"
+                #instance="ngbTypeahead" [inputFormatter]="formatter" placeholder="Search for a event" />
+            </div>
+
+            <div class="calendermargin">
+
+                <ng-template #ct let-c="result" let-t="term">
+                    <ngb-highlight [result]="c.name" [term]="t"></ngb-highlight>
+                  </ng-template>
+    
+                  <input name="combobox" id="typeahead-focus" type="text" class="form-control" [(ngModel)]="typemodel" name ="ResponseVolunteer" #ResponseVolunteer="ngModel" [ngbTypeahead]="typeSearch"
+                    [resultTemplate]="ct" 
+                    (focus)="focustype$.next($event.target.value)" (click)="clicktype$.next($event.target.value)"
+                    #typeinstance="ngbTypeahead" [inputFormatter]="typeformatter" placeholder="Search for a volunteer" />
+                    
+
+            </div>
+            <div class="form-group  calendermargin">
+              <button type="submit" class="btn btn-primary btn-info">
+                <i class="fa fa-floppy-o"></i> Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div>
+        <b>Response Email details</b>
+      </div>
+      <br>
+      <div *ngFor="let details of respondEmailList">
+        <div class="reviewBox">
+          <div class="innerReviewBox">
+
+
+            <div class="row">
+              <p class="reviewDetails reviewName">{{details.EmployeeName}}</p>
+              <p class="reviewDetails right">{{details.EventDate}}</p>
+            </div>
+            <div class="row">
+              <div class="feedbackRow">
+                <div>
+                  {{details.FeedBack}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+      </div>
+      <br>
+      <button mat-flat-button color="accent">Trigger Email</button>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
